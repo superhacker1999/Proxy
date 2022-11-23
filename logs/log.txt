@@ -1,0 +1,46 @@
+SQL reuest: Wed Nov 23 23:57:42 2022
+SELECT DATABASE()
+
+SQL reuest: Wed Nov 23 23:57:42 2022
+SELECT DATABASE()
+
+SQL reuest: Wed Nov 23 23:57:42 2022
+select @@lower_case_table_names
+
+SQL reuest: Wed Nov 23 23:57:42 2022
+SHOW ENGINES
+
+SQL reuest: Wed Nov 23 23:57:42 2022
+SHOW CHARSET
+
+SQL reuest: Wed Nov 23 23:57:42 2022
+SHOW COLLATION
+
+SQL reuest: Wed Nov 23 23:57:42 2022
+SELECT @@GLOBAL.character_set_server,@@GLOBAL.collation_server
+
+SQL reuest: Wed Nov 23 23:57:42 2022
+SHOW PLUGINS
+
+SQL reuest: Wed Nov 23 23:57:42 2022
+SHOW VARIABLES LIKE 'lower_case_table_names'
+
+SQL reuest: Wed Nov 23 23:57:42 2022
+show databases
+
+SQL reuest: Wed Nov 23 23:57:42 2022
+SELECT * FROM information_schema.TABLES t
+WHERE
+	t.TABLE_SCHEMA = 'information_schema'
+	AND t.TABLE_NAME = 'CHECK_CONSTRAINTS'
+
+SQL reuest: Wed Nov 23 23:57:45 2022
+SHOW FULL TABLES FROM db WHERE Table_type <> 'SEQUENCE'
+
+SQL reuest: Wed Nov 23 23:57:45 2022
+SHOW TABLE STATUS FROM db
+
+SQL reuest: Wed Nov 23 23:57:46 2022
+SELECT @@tx_isolation
+
+SQL reuest: Wed Nov 23 23:57:46 2022
