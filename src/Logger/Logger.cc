@@ -23,7 +23,6 @@ void Logger::CreateLog(const char* buffer) {
   if (m_file_.is_open()) {
     auto now = std::chrono::system_clock::now();
     std::time_t end_time = std::chrono::system_clock::to_time_t(now);
-    std::cout << "Adding to log " << std::endl;
     m_file_ << "SQL reuest: " << std::ctime(&end_time) << buffer << "\n\n";
   } else {
     std::cout
