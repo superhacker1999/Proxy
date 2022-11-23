@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mariadb:10.5
+    container_name: mariadb105
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./dbfiles:/var/lib/mysql
+    command: '--default-authentication-plugin=mysql_native_password'
+    networks:
+      - app
+
+# volumes:
+#   dbfile:
+#     driver: local
+#     driver_opts:
+#       type: none
+#       device: ./dbfiles
+#       o: bind
+
+networks:
+  app:
+    driver: bridge
