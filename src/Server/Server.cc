@@ -25,6 +25,15 @@ tcp::Server::Server(int server_port, char* db_ip, int db_port)
   m_fds_[0].events = POLL_IN;
 }
 
+tcp::Server::~Server() {
+  delete m_logger_;
+  close(m_listening_server_fd_);
+  for (auto it : m_clients_) {
+    close(it.GetFd());
+    close(it.GetDBFd());
+  }
+}
+
 /**
  * Method to connect client and db,
  * create a pair of client's fildes and DB's fildes
@@ -69,15 +78,6 @@ void tcp::Server::AddNewUsers_() {
   } while (new_fd != -1);
 }
 
-tcp::Server::~Server() {
-  std::cout << "destructor";
-  delete m_logger_;
-  close(m_listening_server_fd_);
-  for (auto it : m_clients_) {
-    close(it.GetFd());
-    close(it.GetDBFd());
-  }
-}
 
 /**
  * Sends a packet of data from user to DB,
@@ -214,8 +214,8 @@ void tcp::Server::SigHandler(int signum) {
 
 int main(int argc, char** argv) {
   if (argc == 4) {
-    tcp::Server server(atoi(argv[1]), argv[2], atoi(argv[3]));
     signal(SIGINT, tcp::Server::SigHandler);
+    tcp::Server server(atoi(argv[1]), argv[2], atoi(argv[3]));
     server.HandlingCycle();
   } else {
     std::cout << "You'd better type like this:\n\

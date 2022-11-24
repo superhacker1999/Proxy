@@ -136,3 +136,78 @@ SHOW TABLE STATUS FROM db
 SQL reuest: Thu Nov 24 15:34:02 2022
 SELECT * FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='db' AND TABLE_NAME='new_table' ORDER BY ORDINAL_POSITION
 
+SQL reuest: Thu Nov 24 16:38:10 2022
+SELECT DATABASE()
+
+SQL reuest: Thu Nov 24 16:38:10 2022
+SELECT DATABASE()
+
+SQL reuest: Thu Nov 24 16:38:10 2022
+select @@lower_case_table_names
+
+SQL reuest: Thu Nov 24 16:38:10 2022
+SHOW ENGINES
+
+SQL reuest: Thu Nov 24 16:38:10 2022
+SHOW CHARSET
+
+SQL reuest: Thu Nov 24 16:38:10 2022
+SHOW COLLATION
+
+SQL reuest: Thu Nov 24 16:38:10 2022
+SELECT @@GLOBAL.character_set_server,@@GLOBAL.collation_server
+
+SQL reuest: Thu Nov 24 16:38:10 2022
+SHOW PLUGINS
+
+SQL reuest: Thu Nov 24 16:38:10 2022
+SHOW VARIABLES LIKE 'lower_case_table_names'
+
+SQL reuest: Thu Nov 24 16:38:10 2022
+show databases
+
+SQL reuest: Thu Nov 24 16:38:10 2022
+SELECT * FROM information_schema.TABLES t
+WHERE
+	t.TABLE_SCHEMA = 'information_schema'
+	AND t.TABLE_NAME = 'CHECK_CONSTRAINTS'
+
+SQL reuest: Thu Nov 24 16:38:17 2022
+SELECT DATABASE()
+
+SQL reuest: Thu Nov 24 16:38:17 2022
+SELECT DATABASE()
+
+SQL reuest: Thu Nov 24 16:38:17 2022
+select @@lower_case_table_names
+
+SQL reuest: Thu Nov 24 16:38:17 2022
+SHOW ENGINES
+
+SQL reuest: Thu Nov 24 16:38:17 2022
+SHOW CHARSET
+
+SQL reuest: Thu Nov 24 16:38:17 2022
+SHOW COLLATION
+
+SQL reuest: Thu Nov 24 16:38:17 2022
+SELECT @@GLOBAL.character_set_server,@@GLOBAL.collation_server
+
+SQL reuest: Thu Nov 24 16:38:17 2022
+SHOW PLUGINS
+
+SQL reuest: Thu Nov 24 16:38:17 2022
+SHOW VARIABLES LIKE 'lower_case_table_names'
+
+SQL reuest: Thu Nov 24 16:38:17 2022
+show databases
+
+SQL reuest: Thu Nov 24 16:38:17 2022
+SELECT * FROM information_schema.TABLES t
+WHERE
+	t.TABLE_SCHEMA = 'information_schema'
+	AND t.TABLE_NAME = 'CHECK_CONSTRAINTS'
+
+SQL reuest: Thu Nov 24 16:38:23 2022
+SELECT * FROM mysql.user ORDER BY user
+
