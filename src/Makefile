@@ -12,7 +12,6 @@ server_build: clean
 server: server_build
 	./server_build $(SERV_PORT) $(DB_IP) $(DB_PORT)
 
-# make server SERV_PORT=54544 DB_IP=0.0.0.0 DB_PORT=3306
 
 style_check:
 	clang-format -i Server/* Client/* NetHandler/* Logger/*

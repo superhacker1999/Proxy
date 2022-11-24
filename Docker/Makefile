@@ -4,7 +4,7 @@ DOCKER_COMPOSE_FILE = ./Docker-compose.yaml
 .PHONY: start down stop re
 
 start:
-	$(DOCKER_COMPOSE) -f $(DOCKER_COMPOSE_FILE) up
+	$(DOCKER_COMPOSE) -f $(DOCKER_COMPOSE_FILE) up -d
 down:
 	$(DOCKER_COMPOSE) -f $(DOCKER_COMPOSE_FILE) down
 re:

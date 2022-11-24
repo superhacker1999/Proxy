@@ -211,3 +211,107 @@ WHERE
 SQL reuest: Thu Nov 24 16:38:23 2022
 SELECT * FROM mysql.user ORDER BY user
 
+SQL reuest: Thu Nov 24 16:45:36 2022
+SELECT DATABASE()
+
+SQL reuest: Thu Nov 24 16:45:36 2022
+SELECT DATABASE()
+
+SQL reuest: Thu Nov 24 16:45:36 2022
+select @@lower_case_table_names
+
+SQL reuest: Thu Nov 24 16:45:36 2022
+SHOW ENGINES
+
+SQL reuest: Thu Nov 24 16:45:36 2022
+SHOW CHARSET
+
+SQL reuest: Thu Nov 24 16:45:36 2022
+SHOW COLLATION
+
+SQL reuest: Thu Nov 24 16:45:36 2022
+SELECT @@GLOBAL.character_set_server,@@GLOBAL.collation_server
+
+SQL reuest: Thu Nov 24 16:45:36 2022
+SHOW PLUGINS
+
+SQL reuest: Thu Nov 24 16:45:36 2022
+SHOW VARIABLES LIKE 'lower_case_table_names'
+
+SQL reuest: Thu Nov 24 16:45:36 2022
+show databases
+
+SQL reuest: Thu Nov 24 16:45:36 2022
+SELECT * FROM information_schema.TABLES t
+WHERE
+	t.TABLE_SCHEMA = 'information_schema'
+	AND t.TABLE_NAME = 'CHECK_CONSTRAINTS'
+
+SQL reuest: Thu Nov 24 16:45:42 2022
+SELECT DATABASE()
+
+SQL reuest: Thu Nov 24 16:45:42 2022
+SELECT DATABASE()
+
+SQL reuest: Thu Nov 24 16:45:42 2022
+select @@lower_case_table_names
+
+SQL reuest: Thu Nov 24 16:45:42 2022
+SHOW ENGINES
+
+SQL reuest: Thu Nov 24 16:45:42 2022
+SHOW CHARSET
+
+SQL reuest: Thu Nov 24 16:45:42 2022
+SHOW COLLATION
+
+SQL reuest: Thu Nov 24 16:45:42 2022
+SELECT @@GLOBAL.character_set_server,@@GLOBAL.collation_server
+
+SQL reuest: Thu Nov 24 16:45:42 2022
+SHOW PLUGINS
+
+SQL reuest: Thu Nov 24 16:45:42 2022
+SHOW VARIABLES LIKE 'lower_case_table_names'
+
+SQL reuest: Thu Nov 24 16:45:42 2022
+show databases
+
+SQL reuest: Thu Nov 24 16:45:42 2022
+SELECT * FROM information_schema.TABLES t
+WHERE
+	t.TABLE_SCHEMA = 'information_schema'
+	AND t.TABLE_NAME = 'CHECK_CONSTRAINTS'
+
+SQL reuest: Thu Nov 24 16:45:46 2022
+SELECT @@tx_isolation
+
+SQL reuest: Thu Nov 24 16:45:46 2022
+SELECT * FROM information_schema.SCHEMATA WHERE SCHEMA_NAME='database'
+
+SQL reuest: Thu Nov 24 16:45:46 2022
+SELECT SUM((DATA_LENGTH+INDEX_LENGTH))
+FROM INFORMATION_SCHEMA.TABLES 
+WHERE TABLE_SCHEMA='database'
+
+SQL reuest: Thu Nov 24 16:45:47 2022
+SHOW FULL TABLES FROM `database` WHERE Table_type <> 'SEQUENCE'
+
+SQL reuest: Thu Nov 24 16:45:54 2022
+set autocommit=0
+
+SQL reuest: Thu Nov 24 16:45:54 2022
+DROP SCHEMA `db`
+
+SQL reuest: Thu Nov 24 16:45:54 2022
+set autocommit=1
+
+SQL reuest: Thu Nov 24 16:46:03 2022
+set autocommit=0
+
+SQL reuest: Thu Nov 24 16:46:03 2022
+DROP SCHEMA `database`
+
+SQL reuest: Thu Nov 24 16:46:03 2022
+set autocommit=1
+
