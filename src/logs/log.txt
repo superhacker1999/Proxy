@@ -44,3 +44,95 @@ SQL reuest: Wed Nov 23 23:57:46 2022
 SELECT @@tx_isolation
 
 SQL reuest: Wed Nov 23 23:57:46 2022
+SQL reuest: Thu Nov 24 15:33:19 2022
+SELECT DATABASE()
+
+SQL reuest: Thu Nov 24 15:33:19 2022
+SELECT DATABASE()
+
+SQL reuest: Thu Nov 24 15:33:19 2022
+select @@lower_case_table_names
+
+SQL reuest: Thu Nov 24 15:33:19 2022
+SHOW ENGINES
+
+SQL reuest: Thu Nov 24 15:33:19 2022
+SHOW CHARSET
+
+SQL reuest: Thu Nov 24 15:33:19 2022
+SHOW COLLATION
+
+SQL reuest: Thu Nov 24 15:33:19 2022
+SELECT @@GLOBAL.character_set_server,@@GLOBAL.collation_server
+
+SQL reuest: Thu Nov 24 15:33:19 2022
+SHOW PLUGINS
+
+SQL reuest: Thu Nov 24 15:33:19 2022
+SHOW VARIABLES LIKE 'lower_case_table_names'
+
+SQL reuest: Thu Nov 24 15:33:19 2022
+show databases
+
+SQL reuest: Thu Nov 24 15:33:19 2022
+SELECT * FROM information_schema.TABLES t
+WHERE
+	t.TABLE_SCHEMA = 'information_schema'
+	AND t.TABLE_NAME = 'CHECK_CONSTRAINTS'
+
+SQL reuest: Thu Nov 24 15:33:54 2022
+SELECT DATABASE()
+
+SQL reuest: Thu Nov 24 15:33:54 2022
+SELECT DATABASE()
+
+SQL reuest: Thu Nov 24 15:33:54 2022
+select @@lower_case_table_names
+
+SQL reuest: Thu Nov 24 15:33:54 2022
+SHOW ENGINES
+
+SQL reuest: Thu Nov 24 15:33:54 2022
+SHOW CHARSET
+
+SQL reuest: Thu Nov 24 15:33:54 2022
+SHOW COLLATION
+
+SQL reuest: Thu Nov 24 15:33:54 2022
+SELECT @@GLOBAL.character_set_server,@@GLOBAL.collation_server
+
+SQL reuest: Thu Nov 24 15:33:54 2022
+SHOW PLUGINS
+
+SQL reuest: Thu Nov 24 15:33:54 2022
+SHOW VARIABLES LIKE 'lower_case_table_names'
+
+SQL reuest: Thu Nov 24 15:33:54 2022
+show databases
+
+SQL reuest: Thu Nov 24 15:33:54 2022
+SELECT * FROM information_schema.TABLES t
+WHERE
+	t.TABLE_SCHEMA = 'information_schema'
+	AND t.TABLE_NAME = 'CHECK_CONSTRAINTS'
+
+SQL reuest: Thu Nov 24 15:34:00 2022
+SELECT @@tx_isolation
+
+SQL reuest: Thu Nov 24 15:34:00 2022
+SELECT * FROM information_schema.SCHEMATA WHERE SCHEMA_NAME='db'
+
+SQL reuest: Thu Nov 24 15:34:00 2022
+SELECT SUM((DATA_LENGTH+INDEX_LENGTH))
+FROM INFORMATION_SCHEMA.TABLES 
+WHERE TABLE_SCHEMA='db'
+
+SQL reuest: Thu Nov 24 15:34:00 2022
+SHOW FULL TABLES FROM db WHERE Table_type <> 'SEQUENCE'
+
+SQL reuest: Thu Nov 24 15:34:00 2022
+SHOW TABLE STATUS FROM db
+
+SQL reuest: Thu Nov 24 15:34:02 2022
+SELECT * FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='db' AND TABLE_NAME='new_table' ORDER BY ORDINAL_POSITION
+

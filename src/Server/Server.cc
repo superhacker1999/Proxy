@@ -11,7 +11,6 @@
  */
 tcp::Server::Server(int server_port, char* db_ip, int db_port)
     : m_fds_counter_(1),
-      m_shutdown_server_(false),
       m_compress_arr_(false),
       DB_IP(db_ip),
       DB_PORT(db_port),
@@ -71,6 +70,7 @@ void tcp::Server::AddNewUsers_() {
 }
 
 tcp::Server::~Server() {
+  std::cout << "destructor";
   delete m_logger_;
   close(m_listening_server_fd_);
   for (auto it : m_clients_) {
@@ -206,9 +206,16 @@ void tcp::Server::HandlingCycle() {
   } while (!m_shutdown_server_);
 }
 
+void tcp::Server::SigHandler(int signum) {
+  std::cout << "\nSig exit" << std::endl;
+  (void)signum;
+  m_shutdown_server_ = false;
+}
+
 int main(int argc, char** argv) {
   if (argc == 4) {
     tcp::Server server(atoi(argv[1]), argv[2], atoi(argv[3]));
+    signal(SIGINT, tcp::Server::SigHandler);
     server.HandlingCycle();
   } else {
     std::cout << "You'd better type like this:\n\

@@ -3,10 +3,13 @@
 
 #include <algorithm>
 #include <vector>
+#include <csignal>
 
 #include "../Client/Client.h"
 #include "../Logger/Logger.h"
 #include "../NetHandler/NetHandler.h"
+
+bool m_shutdown_server_ = false;
 
 namespace tcp {
 class Server {
@@ -14,6 +17,7 @@ class Server {
   Server(int server_port, char* db_ip, int db_port);
   ~Server();
   void HandlingCycle();
+  static void SigHandler(int signum);
 
  private:
   void ConnectToDB_(int fd);
@@ -23,11 +27,12 @@ class Server {
   void FromUser_(Client& client);
   void ToUser_(Client& client);
   void DisconnectUser_(Client& client);
+  
 
   int m_listening_server_fd_;
   pollfd m_fds_[200]{};
   int m_fds_counter_;
-  bool m_shutdown_server_;
+  
   bool m_compress_arr_;
   std::vector<Client> m_clients_;
   const char* DB_IP;
